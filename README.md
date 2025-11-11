@@ -73,9 +73,10 @@ print("factorial_memo(6) =", result)
 print("Memo tablosu:")
 for k in sorted(memo_example.keys()):
     print(f"{k} : {memo_example[k]}")
+```
 📊 4. Küçük Bir Örnek (n = 6)
-Adım adım factorial_memo(6) çağrısı:
 
+Adım adım factorial_memo(6) çağrısı:
 n	memo[n]	Açıklama
 0	1	Baz değer
 1	1	1 × 1
@@ -92,13 +93,10 @@ Durum	Zaman Karmaşıklığı	Bellek Karmaşıklığı	Açıklama
 Tek bir factorial(n) çağrısı	O(n)	O(n)	Rekürsif çağrı derinliği n
 Çok sayıda farklı n çağrısı	O(N)	O(N)	En büyük N için bir kere hesaplanır
 İteratif versiyon	O(n)	O(1)	Daha az bellek kullanır
-
 Memoization’un avantajı:
 Birden fazla factorial(x) çağrısında ara sonuçları saklayarak tekrar hesaplamayı önler.
 
 📘 6. Örnek Çıktı
-yaml
-Копировать код
 factorial_memo(6) = 720
 Memo tablosu:
 0 : 1
@@ -109,6 +107,7 @@ Memo tablosu:
 5 : 120
 6 : 720
 🧠 7. Sonuç
+
 Faktöriyel problemi basit bir rekürsif yapı gösterir.
 
 Memoization, alt problemleri tekrar hesaplamadan daha verimli hale getirir.
