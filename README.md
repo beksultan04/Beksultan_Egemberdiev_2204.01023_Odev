@@ -1,1 +1,1 @@
-# Beksultan_Egemberdiev_2204.01023_Odev
+# Factorial (Memoization) — Python ile
