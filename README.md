@@ -91,6 +91,7 @@ Bu yaklaşıma üstten-aşağı (top-down) DP / memoization denir.
 3) Kod (Python, memoization ile)
 
 İki versiyon koydum: 1) functools.lru_cache kullanan kısa versiyon, 2) manuel memo sözlüğü ile gösteren versiyon (ödev için anlatımı göstermek açısından faydalı).
+
 # Versiyon A: functools.lru_cache ile (kısa ve pratik)
 from functools import lru_cache
 
@@ -131,6 +132,8 @@ print("factorial_memo(6) =", result)
 print("Memo tablosu (anahtar: değer):")
 for k in sorted(memo_example.keys()):
     print(f"  {k} : {memo_example[k]}")
+
+
 Not: lru_cache kullanınca Python otomatik cache tutar; manuel versiyon ödev için adım adım izlemesi daha açıktır.
 
 4) Küçük bir örnekle tablo gösterimi (n = 6)
@@ -168,6 +171,7 @@ fact(5) → 5 * 24 = 120 → memo[5] = 120
 fact(6) → 6 * 120 = 720 → memo[6] = 720
 
 Son memo tablosu (sıralı):
+
 n	memo[n]
 0	1
 1	1
@@ -176,6 +180,7 @@ n	memo[n]
 4	24
 5	120
 6	720
+
 Bu tablo özetle n! değerlerini tutar; ileride factorial(4) gibi çağrılar olursa doğrudan memo[4] döner, tekrar hesaplama gerekmez.
 
 5) Zaman ve bellek karmaşıklığı (analysis)
