@@ -77,6 +77,7 @@ for k in sorted(memo_example.keys()):
 📊 4. Küçük Bir Örnek (n = 6)
 
 Adım adım factorial_memo(6) çağrısı:
+```
 n	memo[n]	Açıklama
 0	1	Baz değer
 1	1	1 × 1
@@ -85,7 +86,7 @@ n	memo[n]	Açıklama
 4	24	4 × 6
 5	120	5 × 24
 6	720	6 × 120
-
+```
 Sonuç: 6! = 720
 
 ⏱️ 5. Zaman ve Bellek Karmaşıklığı
