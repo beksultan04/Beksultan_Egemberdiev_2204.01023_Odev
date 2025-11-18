@@ -51,28 +51,15 @@ def factorial_lru(n: int) -> int:
 print("factorial_lru(6) =", factorial_lru(6))
 
 
-# Versiyon B: Manuel memoization (ödev için açıklamalı)
-def factorial_memo(n: int, memo=None) -> int:
-    """
-    Üstten-aşağı (top-down) memoization ile faktöriyel hesaplama.
-    memo: dict, anahtar: int n, değer: n!
-    """
+# Versiyon B:
+def factorial_iter(n: int) -> int:
     if n < 0:
         raise ValueError("n negatif olamaz")
-    if memo is None:
-        memo = {0: 1}
-    if n in memo:
-        return memo[n]
-    memo[n] = n * factorial_memo(n - 1, memo)
-    return memo[n]
+    result = 1
+    for i in range(2, n + 1):
+        result *= i
+    return result
 
-# Örnek çalıştırma
-memo_example = {0: 1}
-result = factorial_memo(6, memo_example)
-print("factorial_memo(6) =", result)
-print("Memo tablosu:")
-for k in sorted(memo_example.keys()):
-    print(f"{k} : {memo_example[k]}")
 ```
 📊 4. Küçük Bir Örnek (n = 6)
 
